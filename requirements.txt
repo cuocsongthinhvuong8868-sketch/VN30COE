@@ -8,3 +8,5 @@ yfinance
 vnstock
 arch
 time
+altair
+datetime
