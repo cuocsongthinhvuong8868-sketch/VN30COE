@@ -130,9 +130,9 @@ if st.button("🔄 Cập nhật dữ liệu thị trường (Real-time)", type="
             
             # Tính toán 3 kịch bản EPS Yield theo công thức yêu cầu
             # Expected Return = (Harmonic Mean 1/PE * PR) + g
-            yield_low = (avg_base_yield * PR_RATIO) + GROWTH_LOW
-            yield_base = (avg_base_yield * PR_RATIO) + GROWTH_BASE
-            yield_high = (avg_base_yield * PR_RATIO) + GROWTH_HIGH
+            yield_low = (avg_base_yield - PR_RATIO) + GROWTH_LOW
+            yield_base = (avg_base_yield - PR_RATIO) + GROWTH_BASE
+            yield_high = (avg_base_yield - PR_RATIO) + GROWTH_HIGH
             
             # Lưu vào session_state
             st.session_state['results'] = {
