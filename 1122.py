@@ -11,7 +11,7 @@ os.environ['VNSTOCK_API_KEY'] = 'vnstock_17b56a86b930db526e25e8de447a0bfd'
 from vnstock import Quote
 
 # Cấu hình tham số mô hình (Giữ nguyên)
-PR_RATIO = 0.30
+PR_RATIO = 0.70
 GROWTH_LOW = 0.03
 GROWTH_BASE = 0.05
 GROWTH_HIGH = 0.07
@@ -130,9 +130,9 @@ if st.button("🔄 Cập nhật dữ liệu thị trường (Real-time)", type="
             
             # Tính toán 3 kịch bản EPS Yield theo công thức yêu cầu
             # Expected Return = (Harmonic Mean 1/PE * PR) + g
-            yield_low = (avg_base_yield - PR_RATIO) + GROWTH_LOW
-            yield_base = (avg_base_yield - PR_RATIO) + GROWTH_BASE
-            yield_high = (avg_base_yield - PR_RATIO) + GROWTH_HIGH
+            yield_low = (avg_base_yield * PR_RATIO) + GROWTH_LOW
+            yield_base = (avg_base_yield * PR_RATIO) + GROWTH_BASE
+            yield_high = (avg_base_yield * PR_RATIO) + GROWTH_HIGH
             
             # Lưu vào session_state
             st.session_state['results'] = {
