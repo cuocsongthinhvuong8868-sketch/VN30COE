@@ -11,7 +11,7 @@ os.environ['VNSTOCK_API_KEY'] = 'vnstock_17b56a86b930db526e25e8de447a0bfd'
 from vnstock import Quote
 
 # Cấu hình tham số mô hình (Giữ nguyên)
-PR_RATIO = 0.70
+PR_RATIO = 0.30
 GROWTH_LOW = 0.03
 GROWTH_BASE = 0.05
 GROWTH_HIGH = 0.07
